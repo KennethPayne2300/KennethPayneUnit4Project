@@ -21,15 +21,18 @@ let choice2;
 let choice3;
 let choice4;
 
+// when each button is pressed make the other button of the same question invisible
 option1q1.addEventListener("click", function() {
     choice1 = 1;
     option1q1.disabled = true;
     option2q1.disabled = true;
+    option2q1.style.display = "none";
     question2.style.display = "block";
 });
 option2q1.addEventListener("click", function() {
     choice1 = 2;
     option1q1.disabled = true;
+    option1q1.style.display = "none";
     option2q1.disabled = true;
     question2.style.display = "block";
 });
@@ -37,11 +40,13 @@ option1q2.addEventListener("click", function() {
     choice2 = "action";
     option1q2.disabled = true;
     option2q2.disabled = true;
+    option2q2.style.display = "none";
     question3.style.display = "block";
 });
 option2q2.addEventListener("click", function() {
     choice2 = "comedy";
     option1q2.disabled = true;
+    option1q2.style.display = "none";
     option2q2.disabled = true;
     question3.style.display = "block";
 });
@@ -49,11 +54,13 @@ option1q3.addEventListener("click", function() {
     choice3 = 1;
     option1q3.disabled = true;
     option2q3.disabled = true;
+    option2q3.style.display = "none";
     question4.style.display = "block";
 });
 option2q3.addEventListener("click", function() {
     choice3 = 2;
     option1q3.disabled = true;
+    option1q3.style.display = "none";
     option2q3.disabled = true;
     question4.style.display = "block";
 });
@@ -61,16 +68,19 @@ option1q4.addEventListener("click", function() {
     choice4 = 1;
     option1q4.disabled = true;
     option2q4.disabled = true;
+    option2q4.style.display = "none";
     Checkresults();
 });
 option2q4.addEventListener("click", function() {
     choice4 = 2;
     option1q4.disabled = true;
+    option1q4.style.display = "none";
     option2q4.disabled = true;
     Checkresults();
 });
 
 function Checkresults() {
+    // check the paths to show the results
     if (choice1 === 1) {
         if (choice2 === "action") {
             if(choice3 === 1) {
